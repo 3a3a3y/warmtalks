@@ -2598,6 +2598,21 @@ footer {
     });
   });
 
+  // Expandable feature cards
+  document.querySelectorAll('[data-expandable]').forEach(function (card) {
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('aria-expanded', 'false');
+    function toggleCard() {
+      var open = card.classList.toggle('expanded');
+      card.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    card.addEventListener('click', toggleCard);
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleCard(); }
+    });
+  });
+
 })();
 
 </script>
