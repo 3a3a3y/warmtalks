@@ -720,6 +720,25 @@ section {
   margin-bottom: var(--space-md);
 }
 
+.intro-narrative {
+  font-family: var(--font-body);
+  color: var(--ink-soft);
+  font-size: clamp(0.98rem, 1.15vw, 1.12rem);
+  line-height: 1.5;
+}
+.intro-narrative p {
+  margin-bottom: 0.9rem;
+}
+.intro-narrative .intro-quote-line {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.2rem, 1.7vw, 1.5rem);
+  line-height: 1.3;
+  color: var(--terracotta);
+  margin-top: 1.1rem;
+  margin-bottom: 0;
+}
+
 .intro-text .quote-mark {
   font-family: var(--font-display);
   font-size: 4rem;
@@ -1974,19 +1993,20 @@ footer {
       <div class="intro-grid">
         <div class="intro-text reveal">
           <span class="eyebrow">Зачем это нужно</span>
-          <h2 class="mt-md">Когда у&nbsp;вас в&nbsp;последний раз был <span class="italic-serif">запоминающийся</span> разговор?</h2>
-
-          <p class="lead mt-md">
-            Такой, в&nbsp;котором узнаёшь о&nbsp;себе столько&nbsp;же, сколько о&nbsp;других. Где открываешь близкого человека заново и&nbsp;достаёшь воспоминания, о&nbsp;которых забыл, что они у&nbsp;тебя были.
-          </p>
-
-          <p>
-            Подобные беседы случаются редко. А&nbsp;у&nbsp;ваших друзей, родителей, коллег и&nbsp;детей есть своя библиотека историй. Они просто ждут, когда им&nbsp;зададут правильный вопрос.
-          </p>
-
-          <p>
-            100 вопросов, которые открывают сердце. Не&nbsp;нужно «давай серьёзно поговорим»&nbsp;– карточка спрашивает за&nbsp;вас, а&nbsp;вы&nbsp;просто отвечаете честно.
-          </p>
+          <div class="intro-narrative mt-md">
+            <p>Когда мы были детьми, разговоры случались сами собой.<br>
+            Потом появилась взрослая жизнь.<br>
+            И всё чаще встречи превращаются в обмен новостями, делами и планами.<br>
+            Мы постоянно на связи, но почему-то всё реже говорим о том, что действительно важно.</p>
+            <p>Хотя где-то внутри каждый из нас по-прежнему скучает по тем вечерам, после которых становится тепло.<br>
+            По разговорам, в которых можно быть собой.<br>
+            По моментам, когда время будто замедляется, а человек напротив становится чуть ближе.</p>
+            <p>Эта игра – для разговоров, на которые обычно не хватает времени.<br>
+            Для историй, которые годами остаются нерассказанными.<br>
+            Для искреннего интереса друг к другу.<br>
+            Для вечеров, которые заканчиваются словами:</p>
+            <p class="intro-quote-line">«Надо же. Я никогда этого о тебе не знал.»</p>
+          </div>
         </div>
 
         <div class="intro-visual reveal reveal-delay-2">
