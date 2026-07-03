@@ -1326,6 +1326,34 @@ section {
 }
 
 /* ============================================
+   PRINT / PHYSICAL VERSION + ORDER FORM
+   ============================================ */
+.print-block { margin-top: var(--space-lg); padding-top: var(--space-lg); border-top: 1px solid rgba(74,64,48,0.12); text-align: center; }
+.print-photo { border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-card); margin: var(--space-sm) 0 var(--space-md); }
+.print-photo img { width: 100%; display: block; }
+.print-lead { text-align: left; }
+.print-lead p { margin-bottom: var(--space-sm); color: var(--ink-soft); }
+.print-price { font-family: var(--font-display); font-weight: 600; font-size: 2.2rem; color: var(--ink); margin: var(--space-md) 0 var(--space-xs); }
+.print-price .currency { font-size: 1.3rem; }
+.print-price .print-plus { font-family: var(--font-body); font-weight: 300; font-size: 1rem; color: var(--ink-mute); margin-left: 0.5rem; }
+.order-form { margin-top: var(--space-md); text-align: left; display: grid; gap: 0.9rem; }
+.order-form label { display: block; font-size: 0.85rem; color: var(--ink-mute); margin-bottom: 0.3rem; }
+.order-form input, .order-form select { width: 100%; padding: 0.75rem 0.9rem; border: 1px solid var(--cream-deep); border-radius: var(--radius-sm); background: var(--paper); font-family: var(--font-body); font-size: 0.98rem; color: var(--ink); }
+.order-form input:focus, .order-form select:focus { outline: none; border-color: var(--terracotta-soft); }
+.order-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+.order-btn { margin-top: var(--space-xs); background: var(--terracotta); color: #fff; border: none; padding: 1rem 1.5rem; border-radius: var(--radius-pill); font-family: var(--font-body); font-weight: 400; font-size: 1rem; cursor: pointer; box-shadow: var(--shadow-card); transition: background .25s var(--ease), transform .25s var(--ease); }
+.order-btn:hover { background: var(--terracotta-deep); transform: translateY(-2px); }
+.order-hint { display: block; font-size: 0.8rem; color: var(--ink-faint); margin-top: 0.35rem; }
+.order-error { color: var(--terracotta-deep); font-size: 0.88rem; }
+.order-result { margin-top: var(--space-md); padding: var(--space-md); background: var(--cream-warm); border-radius: var(--radius-md); text-align: left; }
+.order-result p { color: var(--ink-soft); }
+.order-result textarea { width: 100%; min-height: 130px; margin-top: 0.6rem; padding: 0.7rem; border: 1px solid var(--cream-deep); border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 0.9rem; resize: vertical; background: var(--paper); color: var(--ink-soft); }
+.order-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 0.7rem; }
+.order-copy { background: var(--forest); color: #fff; border: none; padding: 0.6rem 1.3rem; border-radius: var(--radius-pill); font-family: var(--font-body); font-size: 0.95rem; cursor: pointer; text-decoration: none; display: inline-block; }
+.order-copy.alt { background: var(--ink-soft); }
+@media (max-width: 560px){ .order-row { grid-template-columns: 1fr; } }
+
+/* ============================================
    FAQ
    ============================================ */
 
@@ -2365,9 +2393,73 @@ footer {
 
         <p class="pricing-note">Оплата картой через защищённую систему ЮKassa. После оплаты сразу откроется страница со&nbsp;ссылкой на&nbsp;скачивание.</p>
 
-        <div class="print-soon">
-          <span class="print-soon-label">Скоро</span>
-          <p>Печатная версия в&nbsp;жестяной коробочке вернётся в&nbsp;продажу совсем скоро. Следите за&nbsp;нашими соцсетями.</p>
+        <div class="print-block">
+          <span class="eyebrow pricing-eyebrow">Печатная версия</span>
+          <div class="pricing-name">В&nbsp;жестяной коробочке</div>
+
+          <div class="print-photo">
+            <img src="images/korobochka.jpg" alt="Жестяные коробочки «Тёплые разговоры» с&nbsp;карточками">
+          </div>
+
+          <div class="print-lead">
+            <p>Есть особое удовольствие в&nbsp;том, чтобы держать разговор в&nbsp;руках. Снять коробочку с&nbsp;полки, открыть крышку, вытянуть карточку наугад и&nbsp;услышать, с&nbsp;чего начнёт близкий человек.</p>
+            <p>Внутри 70&nbsp;карточек на&nbsp;плотном картоне и&nbsp;жестяная коробочка, которой не&nbsp;страшны поездки, дача и&nbsp;сотни вечеров за&nbsp;столом. Её приятно дарить и&nbsp;приятно доставать снова.</p>
+            <p>К&nbsp;печатной версии добавляем полную электронную: 90&nbsp;вопросов в&nbsp;PDF, чтобы играть и&nbsp;с&nbsp;телефона, когда коробочки нет под рукой.</p>
+          </div>
+
+          <ul class="pricing-features">
+            <li>70 карточек в&nbsp;жестяной коробочке</li>
+            <li>Плотный картон, приятно держать в&nbsp;руках</li>
+            <li>Электронная версия (90&nbsp;вопросов) в&nbsp;подарок</li>
+            <li>Для детей от&nbsp;6&nbsp;лет</li>
+          </ul>
+
+          <div class="print-price">1800<span class="currency"> ₽</span><span class="print-plus">+ доставка</span></div>
+
+          <form class="order-form" id="order-form" onsubmit="return wtOrder();">
+            <div>
+              <label for="wt-name">Имя</label>
+              <input id="wt-name" type="text" autocomplete="name" placeholder="Как к вам обращаться">
+            </div>
+            <div class="order-row">
+              <div>
+                <label for="wt-version">Версия</label>
+                <select id="wt-version">
+                  <option value="С детьми" selected>С детьми</option>
+                  <option value="Со взрослыми">Со взрослыми</option>
+                  <option value="Обе версии">Обе версии</option>
+                </select>
+              </div>
+              <div>
+                <label for="wt-qty">Количество</label>
+                <input id="wt-qty" type="number" min="1" value="1">
+              </div>
+            </div>
+            <div>
+              <label for="wt-city">Город</label>
+              <input id="wt-city" type="text" placeholder="Город доставки">
+            </div>
+            <div>
+              <label for="wt-pvz">Доставка</label>
+              <input id="wt-pvz" type="text" placeholder="СДЭК, Яндекс или 5Post: пункт выдачи или адрес">
+              <span class="order-hint">Стоимость доставки посчитаем и&nbsp;напишем вам перед оплатой.</span>
+            </div>
+            <div>
+              <label for="wt-contact">Контакт для связи</label>
+              <input id="wt-contact" type="text" placeholder="Телефон или e-mail (необязательно)">
+            </div>
+            <button type="submit" class="order-btn">Оформить заказ в&nbsp;Telegram</button>
+            <div id="order-error" class="order-error" hidden></div>
+          </form>
+
+          <div id="order-result" class="order-result" hidden>
+            <p><strong>Заявка готова.</strong> Мы&nbsp;открыли чат с&nbsp;Полиной и&nbsp;скопировали заявку. Вставьте её в&nbsp;сообщение и&nbsp;отправьте&nbsp;– Полина посчитает доставку и&nbsp;пришлёт ссылку на&nbsp;оплату.</p>
+            <textarea id="order-text" readonly></textarea>
+            <div class="order-actions">
+              <button type="button" class="order-copy" onclick="wtCopy()">Скопировать заявку</button>
+              <a class="order-copy alt" href="https://t.me/pollylova" target="_blank" rel="noopener">Открыть Telegram</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -2672,5 +2764,35 @@ footer {
 })();
 
 </script>
+
+<script>
+function wtOrder(){
+  var g=function(id){var el=document.getElementById(id);return el?(el.value||'').trim():'';};
+  var name=g('wt-name'),
+      version=document.getElementById('wt-version').value,
+      qty=g('wt-qty')||'1', city=g('wt-city'), pvz=g('wt-pvz'), contact=g('wt-contact');
+  var err=document.getElementById('order-error');
+  if(!city||!pvz){ err.textContent='Заполните, пожалуйста, город и способ доставки.'; err.hidden=false; return false; }
+  err.hidden=true;
+  var msg='Здравствуйте! Хочу заказать печатную версию «Тёплые разговоры».\n'+
+    'Версия: '+version+'\n'+
+    'Количество: '+qty+'\n'+
+    (name?('Имя: '+name+'\n'):'')+
+    'Город: '+city+'\n'+
+    'Доставка: '+pvz+'\n'+
+    (contact?('Контакт: '+contact+'\n'):'');
+  var ta=document.getElementById('order-text'); ta.value=msg;
+  document.getElementById('order-result').hidden=false;
+  try{ navigator.clipboard.writeText(msg); }catch(e){}
+  window.open('https://t.me/pollylova','_blank');
+  document.getElementById('order-result').scrollIntoView({behavior:'smooth',block:'center'});
+  return false;
+}
+function wtCopy(){
+  var ta=document.getElementById('order-text'); ta.focus(); ta.select();
+  try{ navigator.clipboard.writeText(ta.value); }catch(e){ try{document.execCommand('copy');}catch(e2){} }
+}
+</script>
+
 </body>
 </html>
