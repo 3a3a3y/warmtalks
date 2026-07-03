@@ -2345,12 +2345,25 @@ footer {
               <li>Инструкция от&nbsp;автора (отдельный файл)</li>
         </ul>
 
-        <div style="margin-top: 2rem;">
-          <!-- TODO: replace with real Zenclass payment link -->
-          <a href="https://thl2ln.zenclass.ru/public/course/9f5ba94b-3eac-4f70-aa8e-d597d4636848" target="_blank" rel="noopener" class="btn btn-primary btn-large" style="width: 100%; max-width: 320px;">Купить за 850&nbsp;₽</a>
+        <div style="margin-top: 2rem; display: flex; justify-content: center;">
+          <link rel="stylesheet" href="https://yookassa.ru/integration/simplepay/css/yookassa_construct_form.css?v=1.34.0">
+          <form class="yoomoney-payment-form" action="https://yookassa.ru/integration/simplepay/payment" method="post" accept-charset="utf-8">
+            <div class="ym-hidden-inputs">
+              <input name="shopSuccessURL" type="hidden" value="https://warmtalks.ru/dostup-deti.html">
+            </div>
+            <input name="customerNumber" type="hidden" value="Тёплые разговоры. С детьми">
+            <div class="ym-payment-btn-block">
+              <div class="ym-input-icon-rub ym-display-none">
+                <input name="sum" placeholder="0.00" class="ym-input ym-sum-input ym-required-input" type="number" step="any" value="850">
+              </div>
+              <button data-text="Купить игру" class="ym-btn-pay ym-result-price"><span class="ym-text-crop">Купить игру</span> <span class="ym-price-output"> 850,00&nbsp;₽</span></button><img src="https://yookassa.ru/integration/simplepay/img/iokassa-gray.svg?v=1.34.0" class="ym-logo" width="114" height="27" alt="ЮKassa">
+            </div>
+            <input name="shopId" type="hidden" value="1399180">
+          </form>
+          <script src="https://yookassa.ru/integration/simplepay/js/yookassa_construct_form.js?v=1.34.0"></script>
         </div>
 
-        <p class="pricing-note">Оплата картой, СБП – через защищённую систему Zenclass.</p>
+        <p class="pricing-note">Оплата картой через защищённую систему ЮKassa. После оплаты сразу откроется страница со&nbsp;ссылкой на&nbsp;скачивание.</p>
 
         <div class="print-soon">
           <span class="print-soon-label">Скоро</span>
