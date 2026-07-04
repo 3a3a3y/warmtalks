@@ -9,6 +9,14 @@
   <meta property="og:title" content="Тёплые разговоры – для близких разговоров со взрослыми">
   <meta property="og:description" content="90 вопросов, чтобы открывать друг друга заново">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://warmtalks.ru/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://warmtalks.ru/vzroslye.html">
+  <meta property="og:site_name" content="Тёплые разговоры">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://warmtalks.ru/images/og-image.jpg">
   <style>
 /* ============================================
    ТЁПЛЫЕ РАЗГОВОРЫ — Design System
@@ -1924,10 +1932,10 @@ footer {
 .photo-pair img:hover { transform: rotate(0) scale(1.03); }
 
 </style>
-  <link rel="icon" href="/images/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" href="/images/favicon.ico?v=2" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=2">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#C8553D">
   <style>
@@ -1936,7 +1944,50 @@ footer {
       .showcase-grid > [style*="order: 1"] { order: 1 !important; }
       .showcase-grid > [style*="order: 2"] { order: 2 !important; }
     }
-  </style>
+  
+/* --- Hero print note --- */
+.hero-print-note {
+  margin-top: 1rem;
+  font-size: 0.92rem;
+  color: var(--ink-faint);
+}
+.hero-print-note a {
+  color: var(--terracotta-deep);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.hero-print-note a:hover { color: var(--terracotta); }
+
+/* --- Final CTA --- */
+.final-cta {
+  background: var(--cream-warm);
+  padding: var(--space-2xl) 0;
+}
+.final-cta-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+.final-cta h2 {
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+.final-cta .lead {
+  margin-bottom: var(--space-lg);
+}
+.final-cta-buttons {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 640px) {
+  .final-cta-buttons { flex-direction: column; align-items: stretch; }
+  .final-cta-buttons .btn { width: 100%; }
+}
+
+</style>
 </head>
 <body>
 
@@ -1983,6 +2034,7 @@ footer {
             <a href="#kupit" class="btn btn-primary btn-large">Купить игру – 850 ₽</a>
             <a href="#chto-vnutri" class="btn btn-ghost">Посмотреть, что внутри</a>
           </div>
+          <p class="hero-print-note">Есть и&nbsp;печатная версия <a href="#order-form">в&nbsp;жестяной коробочке</a>.</p>
 
           <div class="hero-meta">
             <div class="hero-meta-item">
@@ -2283,7 +2335,7 @@ footer {
           <h2 class="mt-md">Карточки <span class="italic-serif">в&nbsp;руках</span></h2>
           <p class="lead mt-md">Плотный картон. Зелёные рубашки с&nbsp;терракотовым «Тёплые разговоры». В&nbsp;жестяной коробочке, которая красиво лежит на&nbsp;столе и&nbsp;легко берётся в&nbsp;поездку.</p>
           <p>Размер ладони, не&nbsp;занимают места. Лежат в&nbsp;сумке&nbsp;– и&nbsp;любой вечер за&nbsp;ужином с&nbsp;друзьями может стать тем самым, который вспоминают.</p>
-          <a href="#order-form" class="btn btn-primary mt-md">Заказать коробочку</a>
+          <a href="#order-form" class="btn btn-primary mt-md">Заказать коробочку&nbsp;– от&nbsp;1800&nbsp;₽</a>
         </div>
       </div>
     </div>
@@ -2442,7 +2494,7 @@ footer {
           </form>
 
           <div id="order-result" class="order-result" hidden>
-            <p><strong>Заявка готова.</strong> Мы&nbsp;открыли чат с&nbsp;Полиной и&nbsp;скопировали заявку. Вставьте её в&nbsp;сообщение и&nbsp;отправьте&nbsp;– Полина посчитает доставку и&nbsp;пришлёт ссылку на&nbsp;оплату.</p>
+            <p><strong>Заявка готова.</strong> Мы&nbsp;открыли чат с&nbsp;Полиной и&nbsp;скопировали заявку. Вставьте её в&nbsp;сообщение и&nbsp;отправьте&nbsp;– Полина посчитает доставку и&nbsp;пришлёт ссылку на&nbsp;оплату&nbsp;– обычно в&nbsp;течение дня.</p>
             <textarea id="order-text" readonly></textarea>
             <div class="order-actions">
               <button type="button" class="order-copy" onclick="wtCopy()">Скопировать заявку</button>
@@ -2547,15 +2599,48 @@ footer {
 
         <div class="faq-item">
           <button class="faq-question">
-            Когда будет в&nbsp;продаже печатная версия?
+            Как доставляется жестяная коробочка?
             <span class="faq-icon"></span>
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              Печатная версия с&nbsp;карточками в&nbsp;жестяной коробочке временно недоступна. Мы&nbsp;обновляем
-              упаковку и&nbsp;готовим её&nbsp;возвращение. Чтобы узнать первыми, подпишитесь на&nbsp;нас в&nbsp;соцсетях.
+              Отправляем СДЭКом до&nbsp;пункта выдачи в&nbsp;вашем городе. Стоимость доставки рассчитываем
+              индивидуально&nbsp;– она зависит от&nbsp;региона и&nbsp;обычно составляет 300–500&nbsp;₽.
+              По&nbsp;России посылка идёт от&nbsp;3&nbsp;до&nbsp;7&nbsp;дней. После оформления заказа Полина
+              напишет в&nbsp;Telegram, уточнит адрес ПВЗ и&nbsp;пришлёт трек-номер.
             </div>
           </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            А&nbsp;если игра не&nbsp;подойдёт, можно вернуть?
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Да, конечно. Печатную версию можно вернуть в&nbsp;течение 14&nbsp;дней с&nbsp;момента получения,
+              если карточки и&nbsp;коробочка не&nbsp;повреждены. Электронную&nbsp;– вернём деньги в&nbsp;течение
+              7&nbsp;дней, если игра не&nbsp;понравилась. Просто напишите Полине в&nbsp;Telegram,
+              решим по-человечески.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- ==================== FINAL CTA ==================== -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="final-cta-inner">
+        <p class="eyebrow">Сегодня вечером</p>
+        <h2>Вместо разговоров про&nbsp;погоду&nbsp;– тёплый вечер</h2>
+        <p class="lead">Одна карточка за&nbsp;ужином&nbsp;– и&nbsp;близкий человек расскажет то, чего вы&nbsp;не&nbsp;знали.</p>
+        <div class="final-cta-buttons">
+          <a href="#kupit" class="btn btn-primary btn-large">Купить игру&nbsp;– 850&nbsp;₽</a>
+          <a href="#order-form" class="btn btn-ghost">Или заказать коробочку</a>
         </div>
       </div>
     </div>
