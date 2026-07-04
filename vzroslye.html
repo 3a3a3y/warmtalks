@@ -2017,7 +2017,7 @@ footer {
         <a href="vzroslye.html" class="active">Со взрослыми</a>
         <a href="#kak-igrat">Как играть</a>
         <a href="#otzyvy">Отзывы</a>
-        <a href="#kupit" class="btn btn-primary" style="padding: 0.6rem 1.3rem; font-size: 0.92rem;">Купить</a>
+        <a onclick="try{ym(110391405,'reachGoal','buy_digital')}catch(e){}" href="#kupit" class="btn btn-primary" style="padding: 0.6rem 1.3rem; font-size: 0.92rem;">Купить</a>
       </div>
     </div>
   </nav>
@@ -2043,10 +2043,10 @@ footer {
           </p>
 
           <div class="hero-cta">
-            <a href="#kupit" class="btn btn-primary btn-large">Купить игру – 850 ₽</a>
+            <a onclick="try{ym(110391405,'reachGoal','buy_digital')}catch(e){}" href="#kupit" class="btn btn-primary btn-large">Купить игру – 850 ₽</a>
             <a href="#chto-vnutri" class="btn btn-ghost">Посмотреть, что внутри</a>
           </div>
-          <p class="hero-print-note">Есть и&nbsp;печатная версия <a href="#order-form">в&nbsp;жестяной коробочке</a>.</p>
+          <p class="hero-print-note">Есть и&nbsp;печатная версия <a onclick="try{ym(110391405,'reachGoal','order_box')}catch(e){}" href="#order-form">в&nbsp;жестяной коробочке</a>.</p>
 
           <div class="hero-meta">
             <div class="hero-meta-item">
@@ -2347,7 +2347,7 @@ footer {
           <h2 class="mt-md">Карточки <span class="italic-serif">в&nbsp;руках</span></h2>
           <p class="lead mt-md">Плотный картон. Зелёные рубашки с&nbsp;терракотовым «Тёплые разговоры». В&nbsp;жестяной коробочке, которая красиво лежит на&nbsp;столе и&nbsp;легко берётся в&nbsp;поездку.</p>
           <p>Размер ладони, не&nbsp;занимают места. Лежат в&nbsp;сумке&nbsp;– и&nbsp;любой вечер за&nbsp;ужином с&nbsp;друзьями может стать тем самым, который вспоминают.</p>
-          <a href="#order-form" class="btn btn-primary mt-md">Заказать коробочку&nbsp;– от&nbsp;1800&nbsp;₽</a>
+          <a onclick="try{ym(110391405,'reachGoal','order_box')}catch(e){}" href="#order-form" class="btn btn-primary mt-md">Заказать коробочку&nbsp;– от&nbsp;1800&nbsp;₽</a>
         </div>
       </div>
     </div>
@@ -2651,8 +2651,8 @@ footer {
         <h2>Вместо разговоров про&nbsp;погоду&nbsp;– тёплый вечер</h2>
         <p class="lead">Одна карточка за&nbsp;ужином&nbsp;– и&nbsp;близкий человек расскажет то, чего вы&nbsp;не&nbsp;знали.</p>
         <div class="final-cta-buttons">
-          <a href="#kupit" class="btn btn-primary btn-large">Купить игру&nbsp;– 850&nbsp;₽</a>
-          <a href="#order-form" class="btn btn-ghost">Или заказать коробочку</a>
+          <a onclick="try{ym(110391405,'reachGoal','buy_digital')}catch(e){}" href="#kupit" class="btn btn-primary btn-large">Купить игру&nbsp;– 850&nbsp;₽</a>
+          <a onclick="try{ym(110391405,'reachGoal','order_box')}catch(e){}" href="#order-form" class="btn btn-ghost">Или заказать коробочку</a>
         </div>
       </div>
     </div>
@@ -2672,7 +2672,7 @@ footer {
           <ul>
             <li><a href="index.html">С&nbsp;детьми</a></li>
             <li><a href="vzroslye.html">Со&nbsp;взрослыми</a></li>
-            <li><a href="#kupit">Купить</a></li>
+            <li><a onclick="try{ym(110391405,'reachGoal','buy_digital')}catch(e){}" href="#kupit">Купить</a></li>
           </ul>
         </div>
 
@@ -2867,7 +2867,7 @@ function wtOrder(){
     'Доставка: '+pvz+'\n'+
     (contact?('Контакт: '+contact+'\n'):'');
   var ta=document.getElementById('order-text'); ta.value=msg;
-  document.getElementById('order-result').hidden=false;
+  document.getElementById('order-result').hidden=false;try{ym(110391405,'reachGoal','order_box_submit')}catch(e){};
   try{ navigator.clipboard.writeText(msg); }catch(e){}
   window.open('https://t.me/pollylova','_blank');
   document.getElementById('order-result').scrollIntoView({behavior:'smooth',block:'center'});
