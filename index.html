@@ -1133,6 +1133,15 @@ body .price-list li {
 
 mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.18em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .product-layout h2{font-size:clamp(28px,3vw,40px)}
+
+.order-details{margin-top:1.25rem}
+.order-details>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;background:var(--coral);color:#fff;padding:1rem 1.5rem;border-radius:999px;font-family:var(--sans);font-weight:500;font-size:1rem;box-shadow:var(--shadow);transition:background .25s,transform .25s;text-align:center}
+.order-details>summary::-webkit-details-marker{display:none}
+.order-details>summary::after{content:"+";font-size:1.15em;line-height:1;transition:transform .25s}
+.order-details[open]>summary::after{content:"\2013"}
+.order-details>summary:hover{background:var(--coral-deep);transform:translateY(-2px)}
+.order-details-body{margin-top:.4rem}
+.order-details[open]>summary{margin-bottom:.4rem}
 </style>
 
 <!-- Yandex.Metrika counter -->
@@ -1146,7 +1155,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
     ym(110391405, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/110391405" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- deploy 2026-07-07T15:28:09Z -->
+<!-- deploy 2026-07-07T15:31:51Z -->
 </head>
 <body>
 <header class="topbar">
@@ -1536,7 +1545,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <li>Доставка рассчитывается отдельно</li>
 <li>PDF-версия может идти в подарок к заказу</li>
 </ul>
-<form class="order-form" id="order-form" onsubmit="return wtOrder();" onfocusin="try{if(!this.dataset.g){this.dataset.g=1;ym(110391405,'reachGoal','order_box')}}catch(e){}">
+<details class="order-details" ontoggle="try{if(this.open&&!this.dataset.g){this.dataset.g=1;ym(110391405,'reachGoal','order_box')}}catch(e){}"><summary class="order-summary">Заказать печатную версию</summary><div class="order-details-body"><form class="order-form" id="order-form" onsubmit="return wtOrder();">
 <div><label for="wt-name">Имя</label><input id="wt-name" type="text" autocomplete="name" placeholder="Как к вам обращаться"></div>
 <div class="order-row">
 <div><label for="wt-version">Версия</label><select id="wt-version"><option value="С детьми" selected>С детьми</option><option value="Со взрослыми">Со взрослыми</option><option value="Обе версии">Обе версии</option></select></div>
@@ -1555,7 +1564,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <button type="button" class="order-copy" onclick="wtCopy()">Скопировать заявку</button>
 <a class="order-copy alt" href="https://t.me/pollylova" target="_blank" rel="noopener">Открыть Telegram</a>
 </div>
-</div>
+</div></div></details>
 <div class="fineprint">Заказ печатной версии оформляется через Telegram: уточним наличие, доставку и пришлём ссылку на оплату.</div>
 </article>
 </div>
