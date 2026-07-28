@@ -4,9 +4,9 @@
 <html lang="ru"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Тёплые разговоры с детьми - карточная игра для близости с ребёнком</title>
-<meta content="90 бережных вопросов для родителей и детей примерно с 5 лет. Одна карточка за ужином – и ребёнок рассказывает больше, чем обычное «нормально». PDF сразу после оплаты." name="description"/>
+<meta content="Карточная игра: 90 бережных вопросов для родителей и детей примерно с 5 лет. Одна карточка за ужином – и ребёнок рассказывает больше, чем обычное «нормально». PDF – 850 ₽, доступ сразу после оплаты." name="description"/>
 <meta content="Тёплые разговоры с детьми" property="og:title"/>
-<meta content="Карточная игра из 90 бережных вопросов, чтобы ребёнок чувствовал: меня слышат, мне можно рассказывать, я важен." property="og:description"/>
+<meta content="Карточная игра из 90 бережных вопросов, чтобы ребёнок чувствовал: меня слышат, мне можно рассказывать, я важен. PDF – 850 ₽, доступ сразу после оплаты." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://warmtalks.ru/images/og-image.jpg" property="og:image"/>
 <meta content="1200" property="og:image:width"/>
@@ -1144,6 +1144,232 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 .order-details[open]>summary{margin-bottom:.4rem}
 </style>
 
+<style id="v29-pinterest-conversion">
+/* --- Мобильный первый экран: продукт виден сразу под hero-текстом --- */
+.hero-product { display: none; }
+
+@media (max-width: 1040px) {
+  .hero-product {
+    display: block;
+    width: min(100%, 480px);
+    margin: 24px 0 2px;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 20px;
+    background: var(--olive-deep);
+    box-shadow: 0 20px 44px rgba(14,17,13,.26);
+  }
+
+  .hero-product img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 50%;
+  }
+
+  /* нижнее фото больше не нужно: продукт показан выше */
+  .hero::after {
+    content: none !important;
+    display: none !important;
+    height: 0 !important;
+  }
+
+  .hero-actions { margin-top: 24px !important; }
+
+  .micro-proof {
+    margin-top: 24px !important;
+    padding-top: 20px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-product {
+    margin-top: 18px;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* --- Мини-блок PDF сразу после первого экрана --- */
+.pdf-quick {
+  padding: clamp(34px, 4.4vw, 56px) 0;
+  background: var(--paper);
+}
+
+.pdf-quick-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
+  gap: clamp(24px, 3.4vw, 46px);
+  align-items: center;
+  padding: clamp(26px, 3.2vw, 40px);
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: var(--paper-3);
+  box-shadow: var(--shadow);
+}
+
+.pdf-quick h2 {
+  margin-top: 12px;
+  font-size: clamp(23px, 2.2vw, 31px);
+  line-height: 1.24;
+}
+
+.pdf-quick-list {
+  display: grid;
+  gap: 9px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.pdf-quick-list li { position: relative; padding-left: 18px; }
+
+.pdf-quick-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .6em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--coral);
+}
+
+.pdf-quick-side {
+  display: grid;
+  gap: 14px;
+  justify-items: stretch;
+  padding-left: clamp(0px, 2vw, 30px);
+  border-left: 1px solid var(--line);
+}
+
+.pdf-quick-price { display: flex; align-items: baseline; gap: 7px; }
+
+.pdf-quick-price strong {
+  font-family: var(--serif);
+  font-size: 46px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+.pdf-quick-price span { color: var(--muted); font-weight: 600; }
+
+.pdf-quick-note {
+  color: var(--faint);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .pdf-quick-card { grid-template-columns: 1fr; }
+
+  .pdf-quick-side {
+    padding-left: 0;
+    padding-top: 22px;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+}
+
+/* --- Блок ценности внутри карточки PDF --- */
+#kupit .price-card.primary .value-note {
+  margin: 0 0 24px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.14);
+  color: rgba(255,255,255,.92);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* --- Кнопка оплаты ЮKassa в стиле сайта --- */
+#kupit .pay-block { width: 100%; }
+
+#kupit .yoomoney-payment-form {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#kupit .ym-payment-btn-block {
+  display: flex !important;
+  flex-direction: column !important;
+  height: auto !important;
+  min-height: 0 !important;
+  align-items: center !important;
+  gap: 13px !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+#kupit .ym-input-icon-rub,
+#kupit .ym-price-output { display: none !important; }
+
+#kupit .ym-btn-pay {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  min-height: 58px !important;
+  margin: 0 !important;
+  padding: 16px 24px !important;
+  border: 1px solid var(--white) !important;
+  border-radius: 999px !important;
+  background: var(--white) !important;
+  color: var(--ink) !important;
+  font-family: var(--sans) !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  text-align: center !important;
+  box-shadow: 0 14px 32px rgba(40,28,18,.20) !important;
+  cursor: pointer !important;
+  transition: background .18s ease, transform .18s ease !important;
+}
+
+#kupit .ym-btn-pay:hover {
+  background: var(--paper-2) !important;
+  transform: translateY(-2px) !important;
+}
+
+#kupit .ym-text-crop {
+  display: inline !important;
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+  text-align: center !important;
+  width: auto !important;
+  max-width: none !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  white-space: normal !important;
+}
+
+#kupit .ym-logo {
+  display: block !important;
+  margin: 0 auto !important;
+  opacity: .55 !important;
+  filter: brightness(0) invert(1) !important;
+}
+
+/* --- Sticky: цена видна сразу --- */
+.sticky-buy strong { letter-spacing: .01em; }
+</style>
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -1169,7 +1395,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <a href="#faq">FAQ</a><a href="https://warmtalks.ru/vzroslye.html">Со взрослыми</a>
 </div>
 <div class="nav-actions">
-<a class="btn btn-primary btn-small" href="#kupit">Сыграть сегодня</a>
+<a class="btn btn-primary btn-small" href="#kupit">Купить PDF</a>
 <button aria-label="Открыть меню" class="menu-btn" data-menu-button="" type="button">
 <span></span><span></span><span></span>
 </button>
@@ -1181,7 +1407,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <a href="#vnutri">Что внутри</a>
 <a href="#kak-igrat">Как играть</a>
 <a href="#otzyvy">Отзывы родителей</a>
-<a href="#kupit">Сыграть сегодня</a><a href="https://warmtalks.ru/vzroslye.html">Взрослая версия</a>
+<a href="#kupit">Купить PDF за&nbsp;850&nbsp;₽</a><a href="https://warmtalks.ru/vzroslye.html">Взрослая версия</a>
 </div>
 </header>
 <main id="top">
@@ -1194,9 +1420,10 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
             90 бережных вопросов, которые помогают начать разговор без допроса, давления и неловкого
             <strong>«ну расскажи хоть что-нибудь»</strong>.
           </p>
+<div class="hero-product"><img alt="Коробочка игры «Тёплые разговоры» с карточками вопросов" src="assets/hero-mobile-product.jpg"></div>
 <div class="hero-actions">
 <!-- TODO: замените ссылку на актуальную ссылку оплаты детской игры -->
-<a onclick="try{ym(110391405,'reachGoal','buy_digital')}catch(e){}" class="btn btn-primary" href="#kupit">Сыграть сегодня</a>
+<a onclick="try{ym(110391405,'reachGoal','buy_digital')}catch(e){}" class="btn btn-primary" href="#kupit">Купить PDF за&nbsp;850&nbsp;₽</a>
 <a class="btn" href="#primer">Попробовать вопрос</a>
 </div>
 <div aria-label="Ключевые факты" class="micro-proof">
@@ -1204,6 +1431,26 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <span><b>20 минут</b><br class="mobile-proof-break"> на первый вечер</span>
 <span><b>PDF</b> сразу после оплаты</span>
 <span><b>4 года</b> в семьях</span>
+</div>
+</div>
+</div>
+</section>
+<section aria-labelledby="pdf-quick-title" class="pdf-quick">
+<div class="wrap">
+<div class="pdf-quick-card reveal">
+<div class="pdf-quick-main">
+<div class="section-kicker">Электронная версия</div>
+<h2 id="pdf-quick-title">PDF-версия для первого тёплого разговора уже сегодня</h2>
+<ul class="pdf-quick-list">
+<li>90 карточек с&nbsp;вопросами</li>
+<li>PDF сразу после оплаты</li>
+<li>Можно играть с&nbsp;телефона или распечатать</li>
+</ul>
+</div>
+<div class="pdf-quick-side">
+<div class="pdf-quick-price"><strong>850</strong><span>₽</span></div>
+<a onclick="try{ym(110391405,'reachGoal','buy_digital')}catch(e){}" class="btn btn-primary" href="#kupit">Купить PDF за&nbsp;850&nbsp;₽</a>
+<div class="pdf-quick-note">Ссылка приходит автоматически после оплаты.</div>
 </div>
 </div>
 </div>
@@ -1516,20 +1763,21 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <li>Можно играть с телефона, планшета или распечатать</li>
 <li>Инструкция от автора: как слушать без давления</li>
 </ul>
-<div style="margin-top:1.25rem;display:flex;justify-content:center;">
+<div class="value-note">Это не случайный список вопросов из&nbsp;интернета. Внутри&nbsp;– готовая последовательность для&nbsp;бережного разговора: контакт, эмоции, опора, благодарность, воображение и&nbsp;юмор.</div>
+<div class="pay-block" style="margin-top:auto;display:flex;justify-content:center;">
 <link rel="stylesheet" href="https://yookassa.ru/integration/simplepay/css/yookassa_construct_form.css?v=1.34.0">
 <form class="yoomoney-payment-form" action="https://yookassa.ru/integration/simplepay/payment" method="post" accept-charset="utf-8">
 <div class="ym-hidden-inputs"><input name="shopSuccessURL" type="hidden" value="https://warmtalks.ru/dostup-deti.html"></div>
 <input name="customerNumber" type="hidden" value="Тёплые разговоры. С детьми">
 <div class="ym-payment-btn-block">
 <div class="ym-input-icon-rub ym-display-none"><input name="sum" placeholder="0.00" class="ym-input ym-sum-input ym-required-input" type="number" step="any" value="850"></div>
-<button onclick="try{ym(110391405,'reachGoal','buy_digital')}catch(e){}" data-text="Купить игру" class="ym-btn-pay ym-result-price"><span class="ym-text-crop">Купить игру</span> <span class="ym-price-output"> 850,00&nbsp;₽</span></button><img src="https://yookassa.ru/integration/simplepay/img/iokassa-gray.svg?v=1.34.0" class="ym-logo" width="114" height="27" alt="ЮKassa">
+<button onclick="try{ym(110391405,'reachGoal','buy_digital')}catch(e){}" data-text="Купить PDF за 850 ₽" class="ym-btn-pay ym-result-price"><span class="ym-text-crop">Купить PDF за&nbsp;850&nbsp;₽</span> <span class="ym-price-output"> 850,00&nbsp;₽</span></button><img src="https://yookassa.ru/integration/simplepay/img/iokassa-gray.svg?v=1.34.0" class="ym-logo" width="114" height="27" alt="ЮKassa">
 </div>
 <input name="shopId" type="hidden" value="1399180">
 </form>
 <script src="https://yookassa.ru/integration/simplepay/js/yookassa_construct_form.js?v=1.34.0"></script>
 </div>
-<div class="fineprint">После оплаты ссылка приходит автоматически.</div>
+<div class="fineprint">После оплаты ссылка приходит автоматически. Оплата проходит через&nbsp;ЮKassa.</div>
 </article>
 <article class="price-card reveal">
 <div class="price-label">Сувенирная версия</div>
@@ -1625,14 +1873,6 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 </button>
 <div class="faq-a">Да. С подростками особенно важно не давить. Можно предложить выбрать карточку самому, пропускать вопросы и отвечать взрослому первым.</div>
 </article>
-<article class="faq-item">
-<button class="faq-q" type="button">
-<b>07</b>
-<span>А если игра не подойдёт?</span>
-<i aria-hidden="true" class="plus"></i>
-</button>
-<div class="faq-a">Да. Если электронная версия не подошла, напишите нам в Telegram в течение 2 дней после покупки. Мы разберём ситуацию и оформим возврат по-человечески.</div>
-</article>
 </div>
 </div>
 </section>
@@ -1644,7 +1884,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <p>Скачайте PDF, выберите одну карточку и начните с малого. Близость часто растёт именно так - через один спокойный разговор.</p>
 <div class="hero-actions">
 <!-- TODO: замените ссылку на актуальную ссылку оплаты детской игры -->
-<a onclick="try{ym(110391405,'reachGoal','buy_digital')}catch(e){}" class="btn btn-primary" href="#kupit">Получить игру</a>
+<a onclick="try{ym(110391405,'reachGoal','buy_digital')}catch(e){}" class="btn btn-primary" href="#kupit">Получить PDF за&nbsp;850&nbsp;₽</a>
 
 </div>
 </div>
@@ -1685,11 +1925,11 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 </footer>
 <div aria-label="Быстрая покупка" class="sticky-buy">
 <div>
-<strong>PDF сразу после оплаты</strong>
-<span>Сыграть можно сегодня вечером</span>
+<strong>PDF&nbsp;· 850&nbsp;₽</strong>
+<span>Доступ сразу после оплаты</span>
 </div>
 <!-- TODO: замените ссылку на актуальную ссылку оплаты детской игры -->
-<a onclick="try{ym(110391405,'reachGoal','buy_digital')}catch(e){}" class="btn btn-primary btn-small" href="#kupit">Получить</a>
+<a onclick="try{ym(110391405,'reachGoal','buy_digital')}catch(e){}" class="btn btn-primary btn-small" href="#kupit">Купить</a>
 </div>
 <script>
     const questions = [
