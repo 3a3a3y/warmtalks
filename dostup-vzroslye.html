@@ -54,7 +54,33 @@ footer.site a{color:var(--ink-mute);}
 .btn:hover{background:var(--terracotta-deep);transform:translateY(-2px);}
 .note{background:var(--cream-warm);border-radius:var(--radius-md);padding:1.2rem 1.4rem;margin-top:2rem;text-align:left;}
 .note p{margin-bottom:0.5rem;font-size:0.95rem;}
+.hint{color:var(--ink-mute);font-size:0.9rem;max-width:460px;margin:1rem auto 0;}
+.panel{background:var(--paper);border:1px solid rgba(74,64,48,0.10);border-radius:var(--radius-md);padding:1.5rem 1.6rem;margin-top:1.6rem;box-shadow:var(--shadow-card);text-align:left;}
+.panel h2{margin:0 0 0.9rem;font-size:1.2rem;}
+.panel ol,.panel ul{margin:0;padding-left:1.2rem;}
+.panel li{margin-bottom:0.5rem;color:var(--ink-soft);}
+.panel li:last-child{margin-bottom:0;}
+.panel p{margin-bottom:0;}
+.panel .sig{margin:0.9rem 0 0;font-size:0.92rem;color:var(--ink-mute);font-style:italic;}
+.crosssell{background:var(--cream-warm);border:1px solid rgba(74,64,48,0.10);border-radius:var(--radius-md);padding:1.5rem 1.6rem;margin-top:1.6rem;text-align:left;}
+.crosssell h2{margin:0 0 0.5rem;font-size:1.2rem;}
+.crosssell p{margin-bottom:1rem;}
+.btn-ghost{display:inline-block;background:transparent;color:var(--terracotta-deep);border:1.5px solid var(--terracotta);text-decoration:none;font-weight:400;padding:0.7rem 1.5rem;border-radius:var(--radius-pill);transition:background 0.25s var(--ease),color 0.25s var(--ease);}
+.btn-ghost:hover{background:var(--terracotta);color:#fff;}
 </style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110391405', 'ym');
+    ym(110391405, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/110391405" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- deploy 2026-08-02T18:32:09Z -->
 </head>
 <body>
 <header class="site"><div class="inner">
@@ -64,15 +90,47 @@ footer.site a{color:var(--ink-mute);}
 <main class="wrap">
 <div class="hero-thanks">
   <span class="emoji">🎉</span>
-  <h1>Спасибо за&nbsp;покупку!</h1>
-  <p style="max-width:520px;margin:0 auto 2rem;">Игра «Тёплые разговоры. Со&nbsp;взрослыми» уже ждёт вас. Нажмите кнопку, чтобы открыть файлы и&nbsp;скачать&nbsp;PDF.</p>
-  <a class="btn" href="https://disk.yandex.ru/i/G4XkidI-h8KQeg" target="_blank" rel="noopener">Скачать игру</a>
-  <div class="note">
-    <p><strong>Сохраните эту страницу или ссылку</strong>&nbsp;– доступ к&nbsp;файлам останется у&nbsp;вас навсегда.</p>
-    <p>Если ссылка не&nbsp;открывается или возникли вопросы, напишите на&nbsp;<a href="mailto:pollyb@yandex.ru">pollyb@yandex.ru</a>&nbsp;– вышлем файлы на&nbsp;вашу почту в&nbsp;течение 24&nbsp;часов.</p>
-    <p>Есть и&nbsp;<a href="index.html">детская версия</a>&nbsp;– чтобы тёплые разговоры случались всей семьёй.</p>
-  </div>
+  <h1>Ваша взрослая версия уже&nbsp;доступна</h1>
+  <p style="max-width:520px;margin:0 auto 2rem;">Скачайте PDF, сохраните файл и&nbsp;выберите первый вопрос для разговора уже&nbsp;сегодня.</p>
+  <a class="btn" href="https://disk.yandex.ru/i/G4XkidI-h8KQeg" target="_blank" rel="noopener" onclick="try{ym(110391405,'reachGoal','download_adult_pdf')}catch(e){}">Открыть и&nbsp;скачать&nbsp;PDF</a>
+  <p class="hint">Файл откроется на&nbsp;Яндекс.Диске. Нажмите «Скачать» и&nbsp;сохраните PDF на&nbsp;телефон, компьютер или в&nbsp;удобное облако.</p>
 </div>
+
+<section class="panel">
+  <h2>Что сделать сейчас</h2>
+  <ol>
+    <li>Откройте&nbsp;PDF.</li>
+    <li>Скачайте и&nbsp;сохраните файл.</li>
+    <li>Выберите 5–7&nbsp;карточек на&nbsp;первый вечер.</li>
+    <li>Если вопрос не&nbsp;ложится&nbsp;– просто возьмите следующий.</li>
+  </ol>
+</section>
+
+<section class="panel">
+  <h2>Как начать первый разговор</h2>
+  <p>Не&nbsp;начинайте с&nbsp;длинного разговора. Возьмите одну карточку за&nbsp;ужином, в&nbsp;дороге или перед сном. Отвечать можно коротко, смешно, глубоко или пропустить вопрос. Смысл игры не&nbsp;в&nbsp;идеальной откровенности, а&nbsp;в&nbsp;том, чтобы рядом стало чуть больше настоящего внимания.</p>
+</section>
+
+<section class="panel">
+  <h2>Три правила, чтобы разговор остался тёплым</h2>
+  <ul>
+    <li>Не&nbsp;спорить с&nbsp;ответом.</li>
+    <li>Не&nbsp;объяснять человеку его чувства.</li>
+    <li>Не&nbsp;вытаскивать признание силой.</li>
+  </ul>
+  <p class="sig">Иногда самый ценный момент&nbsp;– не&nbsp;следующий вопрос, а&nbsp;пауза после ответа.</p>
+</section>
+
+<section class="panel">
+  <h2>Если файл не&nbsp;открылся</h2>
+  <p>Напишите на&nbsp;<a href="mailto:pollyb@yandex.ru" onclick="try{ym(110391405,'reachGoal','support_email_click')}catch(e){}">pollyb@yandex.ru</a>. Приложите чек или email, который указывали при оплате,&nbsp;– мы вручную отправим&nbsp;PDF.</p>
+</section>
+
+<section class="crosssell">
+  <h2>Есть дети?</h2>
+  <p>У&nbsp;«Тёплых разговоров» есть детская версия&nbsp;– 90&nbsp;вопросов, чтобы ребёнок рассказывал больше, чем «нормально».</p>
+  <a class="btn-ghost" href="index.html" onclick="try{ym(110391405,'reachGoal','kids_version_click')}catch(e){}">Познакомиться с&nbsp;детской версией</a>
+</section>
 </main>
 <footer class="site"><div class="inner">
   <span>© 2026 Тёплые разговоры. Полина Соколова.</span>
