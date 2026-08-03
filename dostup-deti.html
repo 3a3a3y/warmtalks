@@ -12,61 +12,59 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#C8553D">
   <meta name="description" content="Страница доступа к оплаченной игре.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif:wght@400;500;600&display=swap">
+
   <style>
-@font-face{font-family:'Onest';font-style:normal;font-weight:300;font-display:swap;src:url('fonts/onest-normal-300-cyrillic.woff2') format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}
-@font-face{font-family:'Onest';font-style:normal;font-weight:300;font-display:swap;src:url('fonts/onest-normal-300-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC;}
-@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 900;font-display:swap;src:url('fonts/fraunces-normal-300-900-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC;}
 :root{
-  --cream:#FAF6EE;--cream-warm:#F5EFE2;--paper:#FFFCF6;
-  --ink:#2A2317;--ink-soft:#4A4030;--ink-mute:#7A6F5C;
-  --terracotta:#C8553D;--terracotta-deep:#A8412B;
-  --forest:#6B7A3D;--forest-deep:#4E5B26;
-  --font-display:'Fraunces','Times New Roman',serif;
-  --font-body:'Onest',-apple-system,BlinkMacSystemFont,sans-serif;
-  --radius-md:16px;--radius-pill:999px;
-  --shadow-card:0 2px 6px rgba(74,64,48,0.06),0 12px 28px rgba(74,64,48,0.10);
-  --ease:cubic-bezier(0.4,0,0.2,1);
+  --paper:#f7f1e8;--paper-2:#eee6da;--paper-3:#fffdf8;
+  --ink:#181511;--muted:#675e55;--faint:#93877c;
+  --coral:#dd704f;--coral-deep:#b95035;
+  --olive:#566248;--olive-deep:#3f4738;
+  --sun:#efb66c;--lime:#dce77e;--white:#fff;
+  --line:rgba(24,21,17,.13);
+  --max:1220px;--gutter:clamp(18px,4vw,48px);
+  --sans:"Noto Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --serif:"Noto Serif",Georgia,serif;
+  --shadow:0 24px 70px rgba(49,38,29,.12);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
-body{background:var(--cream);color:var(--ink);font-family:var(--font-body);font-weight:300;line-height:1.7;font-size:1.02rem;-webkit-font-smoothing:antialiased;}
-.wrap{max-width:760px;margin:0 auto;padding:2.5rem 1.4rem 4rem;}
-header.site{padding:1.2rem 1.4rem;border-bottom:1px solid rgba(74,64,48,0.10);}
-header.site .inner{max-width:760px;margin:0 auto;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;}
-header.site a.brand{font-family:var(--font-display);font-weight:600;font-size:1.15rem;color:var(--ink);text-decoration:none;}
-header.site a.brand em{color:var(--terracotta);font-style:italic;}
-header.site nav a{color:var(--ink-mute);text-decoration:none;font-size:0.9rem;margin-left:1rem;}
-header.site nav a:hover{color:var(--terracotta);}
-h1{font-family:var(--font-display);font-weight:600;font-size:clamp(1.7rem,4.5vw,2.4rem);line-height:1.2;margin-bottom:0.6rem;}
-.updated{color:var(--ink-mute);font-size:0.88rem;margin-bottom:2.2rem;}
-h2{font-family:var(--font-display);font-weight:600;font-size:1.25rem;margin:2.2rem 0 0.7rem;}
-p,li{color:var(--ink-soft);margin-bottom:0.8rem;}
-ul,ol{padding-left:1.3rem;margin-bottom:0.8rem;}
-a{color:var(--terracotta-deep);}
-.req{background:var(--paper);border:1px solid rgba(74,64,48,0.10);border-radius:var(--radius-md);padding:1.3rem 1.5rem;margin-top:1rem;box-shadow:var(--shadow-card);}
-.req p{margin-bottom:0.3rem;}
-footer.site{border-top:1px solid rgba(74,64,48,0.10);padding:1.6rem 1.4rem;color:var(--ink-mute);font-size:0.85rem;}
-footer.site .inner{max-width:760px;margin:0 auto;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
-footer.site a{color:var(--ink-mute);}
-/* thank-you */
-.hero-thanks{text-align:center;padding-top:3rem;}
-.hero-thanks .emoji{font-size:2.6rem;display:block;margin-bottom:1rem;}
-.btn{display:inline-block;background:var(--terracotta);color:#fff;text-decoration:none;font-weight:400;padding:1rem 2.2rem;border-radius:var(--radius-pill);box-shadow:var(--shadow-card);transition:background 0.25s var(--ease),transform 0.25s var(--ease);}
-.btn:hover{background:var(--terracotta-deep);transform:translateY(-2px);}
-.note{background:var(--cream-warm);border-radius:var(--radius-md);padding:1.2rem 1.4rem;margin-top:2rem;text-align:left;}
-.note p{margin-bottom:0.5rem;font-size:0.95rem;}
-.hint{color:var(--ink-mute);font-size:0.9rem;max-width:460px;margin:1rem auto 0;}
-.panel{background:var(--paper);border:1px solid rgba(74,64,48,0.10);border-radius:var(--radius-md);padding:1.5rem 1.6rem;margin-top:1.6rem;box-shadow:var(--shadow-card);text-align:left;}
-.panel h2{margin:0 0 0.9rem;font-size:1.2rem;}
-.panel ol,.panel ul{margin:0;padding-left:1.2rem;}
-.panel li{margin-bottom:0.5rem;color:var(--ink-soft);}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+a{color:var(--coral-deep);}
+.wrap{width:min(100%,var(--max));margin:0 auto;padding:0 var(--gutter);}
+.topbar{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.16);background:rgba(63,71,56,.94);color:var(--white);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);}
+.topbar .nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+.brand{display:inline-flex;align-items:baseline;gap:7px;font-family:var(--serif);font-weight:600;font-size:21px;color:var(--white);text-decoration:none;white-space:nowrap;}
+.brand span{color:var(--lime);}
+.nav-links{display:flex;gap:22px;color:rgba(255,255,255,.72);font-size:13px;font-weight:600;}
+.nav-links a{color:inherit;text-decoration:none;}
+.nav-links a:hover{color:var(--white);}
+.page{width:min(100%,720px);margin:0 auto;padding:clamp(40px,6vw,72px) var(--gutter) 88px;}
+.hero-thanks{text-align:center;margin-bottom:8px;}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--olive-deep);background:var(--lime);padding:6px 14px;border-radius:999px;margin-bottom:18px;}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,5vw,44px);line-height:1.12;margin-bottom:14px;}
+.hero-thanks p{color:var(--muted);}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:52px;padding:14px 26px;border:1px solid var(--line);border-radius:999px;background:var(--paper-3);color:var(--ink);font-family:var(--sans);font-size:16px;font-weight:600;text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s;}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow);}
+.btn-primary{border-color:var(--coral);background:var(--coral);color:var(--white);}
+.btn-primary:hover{background:var(--coral-deep);}
+.hint{color:var(--faint);font-size:14px;max-width:460px;margin:16px auto 0;}
+.panel{background:var(--paper-3);border:1px solid var(--line);border-radius:18px;padding:26px 28px;margin-top:22px;text-align:left;}
+.panel h2{font-family:var(--serif);font-weight:600;font-size:22px;line-height:1.2;margin-bottom:14px;}
+.panel ol,.panel ul{margin:0;padding-left:22px;}
+.panel li{margin-bottom:8px;color:var(--ink);}
+.panel li::marker{color:var(--coral);}
 .panel li:last-child{margin-bottom:0;}
-.panel p{margin-bottom:0;}
-.panel .sig{margin:0.9rem 0 0;font-size:0.92rem;color:var(--ink-mute);font-style:italic;}
-.crosssell{background:var(--cream-warm);border:1px solid rgba(74,64,48,0.10);border-radius:var(--radius-md);padding:1.5rem 1.6rem;margin-top:1.6rem;text-align:left;}
-.crosssell h2{margin:0 0 0.5rem;font-size:1.2rem;}
-.crosssell p{margin-bottom:1rem;}
-.btn-ghost{display:inline-block;background:transparent;color:var(--terracotta-deep);border:1.5px solid var(--terracotta);text-decoration:none;font-weight:400;padding:0.7rem 1.5rem;border-radius:var(--radius-pill);transition:background 0.25s var(--ease),color 0.25s var(--ease);}
-.btn-ghost:hover{background:var(--terracotta);color:#fff;}
+.panel p{color:var(--ink);margin:0;}
+.panel .sig{margin-top:16px;color:var(--muted);font-style:italic;font-family:var(--serif);}
+.crosssell{background:var(--paper-2);border:1px solid var(--line);border-radius:18px;padding:26px 28px;margin-top:22px;text-align:left;}
+.crosssell h2{font-family:var(--serif);font-weight:600;font-size:22px;margin-bottom:8px;}
+.crosssell p{color:var(--muted);margin-bottom:16px;}
+.site-footer{border-top:1px solid var(--line);background:var(--paper-2);color:var(--muted);font-size:13px;}
+.site-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:28px;padding-bottom:40px;}
+.site-footer a{color:var(--muted);}
+.site-footer a:hover{color:var(--coral-deep);}
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -80,19 +78,19 @@ footer.site a{color:var(--ink-mute);}
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/110391405" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-<!-- deploy 2026-08-02T18:13:54Z -->
+<!-- deploy 2026-08-03T05:50:56Z -->
 </head>
 <body>
-<header class="site"><div class="inner">
-  <a class="brand" href="index.html">Тёплые <em>разговоры</em></a>
-  <nav><a href="index.html">С&nbsp;детьми</a><a href="vzroslye.html">Со&nbsp;взрослыми</a></nav>
-</div></header>
-<main class="wrap">
+<header class="topbar"><div class="wrap"><nav class="nav">
+  <a class="brand" href="index.html">Тёплые <span>разговоры</span></a>
+  <div class="nav-links"><a href="index.html">С&nbsp;детьми</a><a href="vzroslye.html">Со&nbsp;взрослыми</a></div>
+</nav></div></header>
+<main class="page">
 <div class="hero-thanks">
-  <span class="emoji">🎉</span>
+  <div class="eyebrow">Оплата прошла</div>
   <h1>Ваша детская версия уже&nbsp;доступна</h1>
   <p style="max-width:520px;margin:0 auto 2rem;">Скачайте PDF, сохраните файл и&nbsp;выберите первый вопрос для разговора уже&nbsp;сегодня.</p>
-  <a class="btn" href="https://disk.yandex.ru/i/DZstpoAZZyVS3A" target="_blank" rel="noopener" onclick="try{ym(110391405,'reachGoal','download_kids_pdf')}catch(e){}">Открыть и&nbsp;скачать&nbsp;PDF</a>
+  <a class="btn btn-primary" href="https://disk.yandex.ru/i/DZstpoAZZyVS3A" target="_blank" rel="noopener" onclick="try{ym(110391405,'reachGoal','download_kids_pdf')}catch(e){}">Открыть и&nbsp;скачать&nbsp;PDF</a>
   <p class="hint">Файл откроется на&nbsp;Яндекс.Диске. Нажмите «Скачать» и&nbsp;сохраните PDF на&nbsp;телефон, компьютер или в&nbsp;удобное облако.</p>
 </div>
 
@@ -132,7 +130,7 @@ footer.site a{color:var(--ink-mute);}
   <a class="btn-ghost" href="vzroslye.html" onclick="try{ym(110391405,'reachGoal','adult_version_click')}catch(e){}">Познакомиться со&nbsp;взрослой версией</a>
 </section>
 </main>
-<footer class="site"><div class="inner">
+<footer class="site-footer"><div class="wrap">
   <span>© 2026 Тёплые разговоры. Полина Соколова.</span>
   <span><a href="oferta.html">Оферта</a> · <a href="politika.html">Конфиденциальность</a> · <a href="vozvrat.html">Оплата и&nbsp;возврат</a></span>
 </div></footer>
