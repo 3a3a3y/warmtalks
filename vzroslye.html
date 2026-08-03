@@ -1188,6 +1188,14 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 @media(max-width:520px){.order-row{grid-template-columns:1fr}}
 </style>
 
+<style>
+/* Выделенный переключатель версий в шапке */
+.nav-links{align-items:center;}
+.nav-switch{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border:1px solid var(--lime);border-radius:999px;background:rgba(220,231,126,.12);color:var(--lime)!important;font-weight:700!important;white-space:nowrap;transition:background .2s,color .2s;}
+.nav-switch::after{content:"\2192";font-weight:700;}
+.nav-switch:hover{background:var(--lime);color:var(--olive-deep)!important;}
+.mobile-switch{display:inline-block;margin-top:8px;padding:8px 16px;border-radius:999px;background:var(--lime);color:var(--olive-deep)!important;font-weight:700!important;}
+</style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -1199,7 +1207,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
     ym(110391405, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/110391405" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- deploy 2026-07-08T06:11:34Z -->
+<!-- deploy 2026-08-03T15:00:51Z -->
 </head>
 <body>
 <header class="topbar">
@@ -1211,7 +1219,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <a href="#vnutri">Когда играть</a>
 <a href="#otzyvy">Отзывы</a>
 <a href="#faq">FAQ</a>
-<a href="https://warmtalks.ru/">С детьми</a>
+<a class="nav-switch" href="https://warmtalks.ru/">С&nbsp;детьми</a>
 </div>
 <div class="nav-actions">
 <a class="btn btn-primary btn-small" href="#kupit">Сыграть сегодня</a>
@@ -1228,7 +1236,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <a href="#kak-igrat">Как играть</a>
 <a href="#otzyvy">Отзывы</a>
 <a href="#kupit">Сыграть сегодня</a>
-<a href="https://warmtalks.ru/">Детская версия</a>
+<a class="mobile-switch" href="https://warmtalks.ru/">Детская версия</a>
 </div>
 </header>
 <main id="top">
