@@ -1196,6 +1196,14 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 .nav-switch:hover{background:var(--lime);color:var(--olive-deep)!important;}
 .mobile-switch{display:inline-block;margin-top:8px;padding:8px 16px;border-radius:999px;background:var(--lime);color:var(--olive-deep)!important;font-weight:700!important;}
 </style>
+<style>
+/* Pinterest: плашка-мостик над блоком #primer (видна только при utm_source=pinterest) */
+[data-pin-bridge][hidden]{display:none!important;}
+.pin-bridge{background:var(--lime);border-radius:18px;padding:20px 24px;margin-bottom:26px;}
+.pin-bridge .pin-kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--olive-deep);margin-bottom:8px;}
+.pin-bridge p{margin:0;color:var(--ink);font-size:clamp(16px,1.6vw,19px);line-height:1.5;}
+.pin-more{margin:0 0 14px;color:var(--coral-deep);font-weight:600;}
+</style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -1207,7 +1215,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
     ym(110391405, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/110391405" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- deploy 2026-08-03T15:04:48Z -->
+<!-- deploy 2026-08-03T15:11:15Z -->
 </head>
 <body>
 <header class="topbar">
@@ -1282,7 +1290,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 </div>
 <div class="trust-item">
 <div class="trust-k">Сразу</div>
-<div class="trust-v">Ссылка приходит после оплаты. Можно играть с телефона, планшета или распечатать.</div>
+<div class="trust-v">Ссылка откроется сразу после оплаты. Можно играть с телефона, планшета или распечатать.</div>
 </div>
 </div>
 </div>
@@ -1361,6 +1369,10 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 </section>
 <section class="section" id="primer">
 <div class="wrap">
+<div class="pin-bridge" data-pin-bridge hidden>
+<div class="pin-kicker">Вы пришли за&nbsp;остальными вопросами</div>
+<p>Те карточки с&nbsp;пина – из&nbsp;игры «Тёплые разговоры». Всего в&nbsp;ней 90&nbsp;вопросов. Вытяните один прямо сейчас:</p>
+</div>
 <div class="try-layout">
 <div aria-live="polite" class="sample-card reveal">
 <div class="sample-num" data-card-num="">№ 44</div>
@@ -1382,6 +1394,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <li>Если ответ задел важное, не спешите советовать – сначала дослушайте.</li>
 </ul>
 <div data-sample-actions-desktop-anchor=""></div>
+<p class="pin-more" data-pin-bridge hidden>Понравился вопрос? Таких внутри ещё&nbsp;89.</p>
 <div class="hero-actions" data-sample-actions="">
 <button class="btn" data-next-question="" type="button">Показать другой вопрос</button>
 <a class="btn btn-primary" href="#kupit">Хочу такие карточки</a>
@@ -1536,7 +1549,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <div class="section-kicker" style="justify-content: center;">Купить игру</div>
 <h2 style="margin-top: 14px;">Начните сегодня вечером. Одной карточки достаточно.</h2>
 <p class="section-lead" style="display: block; margin: 20px auto 0;">
-            Электронная версия приходит сразу после оплаты. Можно играть с экрана телефона, отправить PDF близкому человеку или распечатать карточки дома.
+            Электронная версия открывается сразу после оплаты. Можно играть с экрана телефона, отправить PDF близкому человеку или распечатать карточки дома.
           </p>
 </div>
 <div class="pricing">
@@ -2049,4 +2062,7 @@ body .reviews-grid{margin-top:0 !important;gap:14px !important;}
 body .section-head{gap:48px !important;margin-bottom:48px !important;}
 body .section-kicker{margin-bottom:14px !important;}
 </style>
+<script>
+(function(){try{if(/[?&]utm_source=pinterest(?:&|$)/.test(location.search)){document.querySelectorAll('[data-pin-bridge]').forEach(function(el){el.removeAttribute('hidden');});}}catch(e){}})();
+</script>
 </body></html>
