@@ -1404,6 +1404,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 .buy-dialog .ym-btn-pay { display: inline-flex !important; align-items: center !important; justify-content: center !important; width: 100% !important; min-height: 58px !important; margin: 0 !important; padding: 16px 24px !important; border: 1px solid var(--white) !important; border-radius: 999px !important; background: var(--white) !important; color: var(--ink) !important; font-family: var(--sans) !important; font-size: 15px !important; font-weight: 600 !important; line-height: 1.2 !important; letter-spacing: 0 !important; text-transform: none !important; cursor: pointer !important; }
 .buy-dialog .ym-text-crop { display: inline !important; width: auto !important; margin: 0 !important; overflow: visible !important; white-space: normal !important; }
 .buy-dialog .ym-logo { display: none !important; }
+.sticky-buy.is-suppressed { display: none; }
 
 @media (max-width: 520px) {
   .buy-dialog { width: calc(100vw - 20px); max-height: calc(100vh - 20px); }
@@ -1457,13 +1458,13 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <div class="eyebrow">Для родителей и детей примерно с 5 лет</div>
 <h1>Одна карточка за ужином - и ребёнок рассказывает больше, чем <em>«нормально».</em></h1>
 <p class="hero-lead">
-            90 бережных вопросов, которые помогают начать разговор без допроса, давления и неловкого
+            90 готовых вопросов, чтобы не придумывать, о чём спросить. Без допроса, давления и неловкого
             <strong>«ну расскажи хоть что-нибудь»</strong>.
           </p>
 <div class="hero-product"><img alt="Коробочка игры «Тёплые разговоры» с карточками вопросов" src="assets/hero-mobile-product.jpg"></div>
 <div class="hero-actions">
 <a class="btn btn-primary" data-open-buy data-buy-source="hero" href="#kupit">Купить PDF за&nbsp;850&nbsp;₽</a>
-<a class="btn" href="#primer">Попробовать вопрос</a>
+<a class="btn" href="#primer">Посмотреть 6 вопросов</a>
 </div>
 <div aria-label="Ключевые факты" class="micro-proof">
 <span><b>90</b> вопросов</span>
@@ -1479,17 +1480,17 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <div class="pdf-quick-card reveal">
 <div class="pdf-quick-main">
 <div class="section-kicker">Электронная версия</div>
-<h2 id="pdf-quick-title">PDF-версия для первого тёплого разговора уже сегодня</h2>
+<h2 id="pdf-quick-title">90 вопросов в PDF - откройте на телефоне и сыграйте уже сегодня</h2>
 <ul class="pdf-quick-list">
-<li>90 карточек с&nbsp;вопросами</li>
-<li>PDF сразу после оплаты</li>
-<li>Можно играть с&nbsp;телефона или распечатать</li>
+<li>Для лёгких, смешных и важных разговоров</li>
+<li>Ссылка откроется сразу после оплаты</li>
+<li>Можно играть с&nbsp;телефона или распечатать карточки</li>
 </ul>
 </div>
 <div class="pdf-quick-side">
 <div class="pdf-quick-price"><strong>850</strong><span>₽</span></div>
 <button class="btn btn-primary" data-open-buy data-buy-source="pdf-preview" type="button">Купить PDF за&nbsp;850&nbsp;₽</button>
-<div class="pdf-quick-note">Ссылка откроется сразу после оплаты.</div>
+<div class="pdf-quick-note">Без регистрации · оплата через ЮKassa</div>
 </div>
 </div>
 </div>
@@ -1502,8 +1503,8 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <div class="trust-v">Возраст - ориентир. Если малыш уже готов к интересным беседам, можно начинать раньше.</div>
 </div>
 <div class="trust-item">
-<div class="trust-k">1 карточка</div>
-<div class="trust-v">Достаточно одного вопроса, чтобы вечер стал теплее.</div>
+<div class="trust-k">Просят ещё</div>
+<div class="trust-v">«Жалко, что карточки закончились», - мама девочки 12 лет.</div>
 </div>
 <div class="trust-item">
 <div class="trust-k">Без оценок</div>
@@ -1606,7 +1607,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <p class="pin-more" data-pin-bridge hidden>Понравился вопрос? Таких внутри ещё&nbsp;89.</p>
 <div class="hero-actions" data-sample-actions="">
 <button class="btn" data-next-question="" type="button">Показать другой вопрос</button>
-<button class="btn btn-primary" data-open-buy data-buy-source="question" type="button">Хочу такие карточки</button>
+<button class="btn btn-primary" data-open-buy data-buy-source="question" type="button">Купить PDF · 850&nbsp;₽</button>
 </div>
 </div>
 </div>
@@ -1790,7 +1791,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <div class="section-kicker">Купить игру</div>
 <h2>Начните сегодня вечером. Одной карточки достаточно.</h2>
 <p class="section-lead" style="margin: 20px auto 0;">
-            Выберите быстрый PDF или оформите печатную коробочку через Telegram: там мы уточним наличие, рассчитаем доставку и пришлём ссылку на оплату. Главный путь для первой покупки – электронная версия: ссылка откроется сразу после оплаты.
+            Хотите сыграть сегодня - выбирайте PDF: ссылка откроется сразу после оплаты. Хотите подарить игру или держать карточки в руках - закажите жестяную коробочку с доставкой.
           </p>
 </div>
 <div class="pricing">
@@ -1863,7 +1864,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <span>С какого возраста подходит игра?</span>
 <i aria-hidden="true" class="plus"></i>
 </button>
-<div class="faq-a">Мы ориентируемся примерно на возраст от 5 лет, но это не жёсткая граница. Если вы чувствуете, что ваш малыш уже готов к интересным беседам, берите не раздумывая: не обязательно ждать «правильного» возраста. Иногда проверить - и есть самый чудесный опыт, даже если ребёнок ответит коротко, смешно или совсем по-своему.</div>
+<div class="faq-a">Ориентир - примерно с 5 лет, строгой верхней границы нет. Для младших выбирайте фантазийные и смешные вопросы. Подростку лучше дать самому выбрать карточку и право пропустить любую.</div>
 </article>
 <article class="faq-item">
 <button class="faq-q" type="button">
@@ -1879,7 +1880,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <span>Как я получу электронную версию?</span>
 <i aria-hidden="true" class="plus"></i>
 </button>
-<div class="faq-a">После оплаты вас перенесёт на страницу скачивания PDF. Файл можно открыть с телефона, сохранить, распечатать дома или отдать в типографию. На всякий случай можно сделать скриншот экрана перед оплатой: если произойдёт сбой, ссылка потеряется или файл случайно удалится, просто напишите нам - мы оперативно отправим игру лично.</div>
+<div class="faq-a">После оплаты сайт автоматически откроет страницу скачивания. Сохраните PDF на телефон или компьютер: его можно открыть с экрана, распечатать дома или отдать в типографию. Если оплата прошла, а файл не открылся, напишите на <a href="mailto:pollyb@yandex.ru">pollyb@yandex.ru</a> - отправим игру вручную.</div>
 </article>
 <article class="faq-item">
 <button class="faq-q" type="button">
@@ -1887,7 +1888,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <span>Это не слишком психологично для ребёнка?</span>
 <i aria-hidden="true" class="plus"></i>
 </button>
-<div class="faq-a">Игра не ставит диагнозы и не заменяет консультацию психолога. Это бережные вопросы для семейного разговора. Их задача - не анализировать ребёнка, а дать ему опыт внимательного слушания.</div>
+<div class="faq-a">Игра не ставит диагнозы и не заменяет консультацию психолога. Это бережные вопросы для семейного разговора, а не попытка анализировать ребёнка. На любой вопрос можно не отвечать и взять следующий.</div>
 </article>
 <article class="faq-item">
 <button class="faq-q" type="button">
@@ -1954,7 +1955,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 </div>
 </div>
 </footer>
-<div aria-label="Быстрая покупка" class="sticky-buy">
+<div aria-label="Быстрая покупка" class="sticky-buy is-suppressed">
 <div>
 <strong>PDF&nbsp;· 850&nbsp;₽</strong>
 <span>Доступ сразу после оплаты</span>
@@ -1968,15 +1969,10 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <h2 id="buy-dialog-title">90 вопросов для тёплого разговора с ребёнком</h2>
 <div class="buy-dialog-price">850&nbsp;₽</div>
 <ul class="price-list">
-<li>PDF откроется сразу после оплаты</li>
+<li>Страница скачивания откроется сразу после оплаты</li>
 <li>Можно играть с телефона или распечатать</li>
 <li>Инструкция и все 90 карточек внутри</li>
 </ul>
-<div class="buy-dialog-proof" aria-label="Отзывы покупателей">
-<blockquote>«Я решила сразу опробовать карточки и обалдела от ответа ребёнка».</blockquote>
-<blockquote>«Дочка в конце сказала: жалко, что карточки закончились».</blockquote>
-</div>
-<p class="buy-dialog-help">Оплата проходит через ЮKassa. Если ссылка потеряется или файл не откроется, напишите на <a href="mailto:pollyb@yandex.ru">pollyb@yandex.ru</a> - отправим игру вручную.</p>
 <div class="pay-block">
 <form class="yoomoney-payment-form" action="https://yookassa.ru/integration/simplepay/payment" method="post" accept-charset="utf-8" data-payment-form>
 <div class="ym-hidden-inputs"><input name="shopSuccessURL" type="hidden" value="https://warmtalks.ru/dostup-deti.html"></div>
@@ -1988,6 +1984,11 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <input name="shopId" type="hidden" value="1399180">
 </form>
 </div>
+<div class="buy-dialog-proof" aria-label="Отзывы покупателей">
+<blockquote>«Я решила сразу опробовать карточки и обалдела от ответа ребёнка».</blockquote>
+<blockquote>«Дочка в конце сказала: жалко, что карточки закончились».</blockquote>
+</div>
+<p class="buy-dialog-help">Без регистрации. Оплата проходит через ЮKassa. Если ссылка потеряется или файл не откроется, напишите на <a href="mailto:pollyb@yandex.ru">pollyb@yandex.ru</a> - отправим игру вручную.</p>
 </article>
 </dialog>
 <script src="https://yookassa.ru/integration/simplepay/js/yookassa_construct_form.js?v=1.34.0"></script>
@@ -2035,6 +2036,19 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 
     if (questionButton) {
       questionButton.addEventListener("click", showNextQuestion);
+    }
+
+    const stickyBuy = document.querySelector(".sticky-buy");
+    const heroSection = document.querySelector(".hero");
+
+    if (stickyBuy && heroSection && "IntersectionObserver" in window) {
+      const stickyObserver = new IntersectionObserver((entries) => {
+        const heroIsVisible = entries.some((entry) => entry.isIntersecting);
+        stickyBuy.classList.toggle("is-suppressed", heroIsVisible);
+      }, { threshold: 0.01 });
+      stickyObserver.observe(heroSection);
+    } else if (stickyBuy) {
+      stickyBuy.classList.remove("is-suppressed");
     }
 
 
@@ -2130,7 +2144,9 @@ function wtCopy(){
   document.querySelectorAll('[data-open-buy]').forEach(function (trigger) {
     trigger.addEventListener('click', function (event) {
       event.preventDefault();
-      goal('checkout_open', { source: trigger.dataset.buySource || 'unknown' });
+      var buySource = trigger.dataset.buySource || 'unknown';
+      try { sessionStorage.setItem('wtBuySourceKids', buySource); } catch (e) {}
+      goal('checkout_open', { source: buySource });
       if (dialog && typeof dialog.showModal === 'function') {
         dialog.showModal();
       } else {
@@ -2153,8 +2169,9 @@ function wtCopy(){
     if (paymentStarted) return;
     paymentStarted = true;
     try {
+      var buySource = sessionStorage.getItem('wtBuySourceKids') || 'unknown';
       try { sessionStorage.setItem('wtPaymentStartedKids', '1'); } catch (e) {}
-      goal('payment_start', { product: 'kids_pdf', price: 850 });
+      goal('payment_start', { product: 'kids_pdf', price: 850, source: buySource });
       goal('buy_digital');
     } catch (e) {}
   }

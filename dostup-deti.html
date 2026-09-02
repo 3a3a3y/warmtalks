@@ -138,8 +138,10 @@ h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,5vw,44px);line-
 (function () {
   try {
     if (sessionStorage.getItem('wtPaymentStartedKids') === '1') {
-      ym(110391405, 'reachGoal', 'purchase_success', { product: 'kids_pdf', price: 850 });
+      var buySource = sessionStorage.getItem('wtBuySourceKids') || 'unknown';
+      ym(110391405, 'reachGoal', 'purchase_success', { product: 'kids_pdf', price: 850, source: buySource });
       sessionStorage.removeItem('wtPaymentStartedKids');
+      sessionStorage.removeItem('wtBuySourceKids');
     }
   } catch (e) {}
 })();
