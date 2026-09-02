@@ -134,5 +134,15 @@ h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,5vw,44px);line-
   <span>© 2026 Тёплые разговоры. Полина Соколова.</span>
   <span><a href="oferta.html">Оферта</a> · <a href="politika.html">Конфиденциальность</a> · <a href="vozvrat.html">Оплата и&nbsp;возврат</a></span>
 </div></footer>
+<script>
+(function () {
+  try {
+    if (sessionStorage.getItem('wtPaymentStartedKids') === '1') {
+      ym(110391405, 'reachGoal', 'purchase_success', { product: 'kids_pdf', price: 850 });
+      sessionStorage.removeItem('wtPaymentStartedKids');
+    }
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>
