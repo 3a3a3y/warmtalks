@@ -1386,25 +1386,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 .pin-bridge p{margin:0;color:var(--ink);font-size:clamp(16px,1.6vw,19px);line-height:1.5;}
 .pin-more{margin:0 0 14px;color:var(--coral-deep);font-weight:600;}
 </style>
-<style id="v30-conversion-without-redesign">
-[data-pinterest-hero][hidden], [data-regular-hero][hidden] { display: none !important; }
-.pain-grid .pain:nth-child(n+4) { display: none; }
-.pain-grid .pain:nth-child(3) { border-right: 0; }
-
-.sample-card.sample-card-real {
-  min-height: 500px;
-  height: 500px;
-  padding: 0;
-  overflow: hidden;
-  background: var(--paper-2);
-}
-.sample-card.sample-card-real::after { content: none; }
-.sample-card-real img { display: block; width: 100%; height: 100%; object-fit: cover; }
-
-.pdf-quick-card.has-pdf-preview { grid-template-columns: 112px minmax(0, 1fr) minmax(0, 300px); }
-.pdf-quick-cover { width: 112px; aspect-ratio: 282.96 / 504.96; overflow: hidden; border-radius: 12px; box-shadow: 0 12px 26px rgba(40,28,18,.16); }
-.pdf-quick-cover img { display: block; width: 100%; height: 100%; object-fit: cover; }
-
+<style id="v30-checkout-dialog">
 .buy-dialog { width: min(94vw, 560px); max-height: 92vh; margin: auto; padding: 0; border: 0; border-radius: 28px; background: transparent; color: var(--white); overflow: visible; }
 .buy-dialog::backdrop { background: rgba(24,21,17,.68); backdrop-filter: blur(5px); }
 .buy-dialog-card { position: relative; min-height: 0; max-height: calc(100vh - 28px); margin: 0; padding: clamp(26px,4vw,36px); overflow-y: auto; }
@@ -1423,20 +1405,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 .buy-dialog .ym-text-crop { display: inline !important; width: auto !important; margin: 0 !important; overflow: visible !important; white-space: normal !important; }
 .buy-dialog .ym-logo { display: none !important; }
 
-@media (max-width: 900px) {
-  .pdf-quick-card.has-pdf-preview { grid-template-columns: 88px minmax(0,1fr); }
-  .pdf-quick-cover { width: 88px; grid-row: 1; }
-  .pdf-quick-main { grid-row: 1; }
-  .pdf-quick-side { grid-column: 1 / -1; }
-}
-@media (max-width: 820px) {
-  .sample-card.sample-card-real { min-height: 430px; height: 430px; }
-}
 @media (max-width: 520px) {
-  .sample-card.sample-card-real { min-height: 400px; height: 400px; }
-  .pdf-quick-card.has-pdf-preview { grid-template-columns: 70px minmax(0,1fr); gap: 18px; }
-  .pdf-quick-cover { width: 70px; border-radius: 9px; }
-  .pdf-quick h2 { font-size: 21px; }
   .buy-dialog { width: calc(100vw - 20px); max-height: calc(100vh - 20px); }
   .buy-dialog-card { max-height: calc(100vh - 20px); overflow-y: auto; border-radius: 22px; }
 }
@@ -1485,21 +1454,16 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <section class="hero">
 <div class="wrap">
 <div class="hero-inner reveal">
-<div class="eyebrow" data-regular-hero>Для родителей и детей примерно с 5 лет</div>
-<div class="eyebrow" data-pinterest-hero hidden>Вы пришли за остальными вопросами</div>
-<h1 data-regular-hero>Одна карточка за ужином - и ребёнок рассказывает больше, чем <em>«нормально».</em></h1>
-<h1 data-pinterest-hero hidden>Те самые вопросы из Pinterest. В полной игре их <em>90.</em></h1>
-<p class="hero-lead" data-regular-hero>
+<div class="eyebrow">Для родителей и детей примерно с 5 лет</div>
+<h1>Одна карточка за ужином - и ребёнок рассказывает больше, чем <em>«нормально».</em></h1>
+<p class="hero-lead">
             90 бережных вопросов, которые помогают начать разговор без допроса, давления и неловкого
             <strong>«ну расскажи хоть что-нибудь»</strong>.
           </p>
-<p class="hero-lead" data-pinterest-hero hidden>
-            На пине вы увидели часть подборки. Здесь - готовая игра из 90 бережных вопросов для детей примерно с 5 лет: PDF откроется сразу после оплаты.
-          </p>
 <div class="hero-product"><img alt="Коробочка игры «Тёплые разговоры» с карточками вопросов" src="assets/hero-mobile-product.jpg"></div>
 <div class="hero-actions">
-<a class="btn btn-primary" data-open-buy data-buy-source="hero" href="#kupit"><span data-regular-hero>Купить PDF за&nbsp;850&nbsp;₽</span><span data-pinterest-hero hidden>Получить все 90 · 850&nbsp;₽</span></a>
-<a class="btn" href="#primer"><span data-regular-hero>Попробовать вопрос</span><span data-pinterest-hero hidden>Посмотреть ещё вопросы</span></a>
+<a class="btn btn-primary" data-open-buy data-buy-source="hero" href="#kupit">Купить PDF за&nbsp;850&nbsp;₽</a>
+<a class="btn" href="#primer">Попробовать вопрос</a>
 </div>
 <div aria-label="Ключевые факты" class="micro-proof">
 <span><b>90</b> вопросов</span>
@@ -1512,8 +1476,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 </section>
 <section aria-labelledby="pdf-quick-title" class="pdf-quick">
 <div class="wrap">
-<div class="pdf-quick-card has-pdf-preview reveal">
-<figure class="pdf-quick-cover"><img src="assets/kids-pdf-cover.jpg" alt="Обложка PDF Тёплые разговоры: 90 вопросов для детей" loading="lazy"></figure>
+<div class="pdf-quick-card reveal">
 <div class="pdf-quick-main">
 <div class="section-kicker">Электронная версия</div>
 <h2 id="pdf-quick-title">PDF-версия для первого тёплого разговора уже сегодня</h2>
@@ -1617,11 +1580,16 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <div class="wrap">
 <div class="pin-bridge" data-pin-bridge hidden>
 <div class="pin-kicker">Вы пришли за&nbsp;остальными вопросами</div>
-<p>Те вопросы с&nbsp;пина - из&nbsp;игры «Тёплые разговоры». Всего в&nbsp;ней 90&nbsp;карточек. Перелистайте три настоящих страницы из PDF:</p>
+<p>Те карточки с&nbsp;пина – из&nbsp;игры «Тёплые разговоры». Всего в&nbsp;ней 90&nbsp;вопросов. Вытяните один прямо сейчас:</p>
 </div>
 <div class="try-layout">
-<div aria-live="polite" class="sample-card sample-card-real reveal">
-<img data-card-image src="assets/kids-question-27.jpg" alt="Вопрос 27: Представь, что у тебя свой магазин - что бы в нём продавалось?" loading="lazy">
+<div aria-live="polite" class="sample-card reveal">
+<div class="sample-num" data-card-num="">№ 27</div>
+<div class="sample-question" data-card-question="">Если бы у твоих чувств была погода, какая погода у тебя сейчас?</div>
+<div class="sample-foot">
+<span>Тёплые разговоры</span>
+<span>5±</span>
+</div>
 </div>
 <div class="reveal sample-copy">
 <div class="section-kicker">Попробуйте прямо сейчас</div>
@@ -1638,7 +1606,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <p class="pin-more" data-pin-bridge hidden>Понравился вопрос? Таких внутри ещё&nbsp;89.</p>
 <div class="hero-actions" data-sample-actions="">
 <button class="btn" data-next-question="" type="button">Показать другой вопрос</button>
-<button class="btn btn-primary" data-open-buy data-buy-source="question" type="button">Получить все 90 · 850&nbsp;₽</button>
+<button class="btn btn-primary" data-open-buy data-buy-source="question" type="button">Хочу такие карточки</button>
 </div>
 </div>
 </div>
@@ -1840,7 +1808,7 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <li>Инструкция от автора: как слушать без давления</li>
 </ul>
 <div class="value-note">Это не случайный список вопросов из&nbsp;интернета. Внутри&nbsp;– готовая последовательность для&nbsp;бережного разговора: контакт, эмоции, опора, благодарность, воображение и&nbsp;юмор.</div>
-<button class="btn btn-primary" data-open-buy data-buy-source="pricing" type="button">Перейти к оплате PDF</button>
+<button class="btn btn-primary" data-open-buy data-buy-source="pricing" type="button">Купить PDF за&nbsp;850&nbsp;₽</button>
 <div class="fineprint">Ссылка откроется сразу после оплаты. Оплата проходит через&nbsp;ЮKassa.</div>
 </article>
 <article class="price-card reveal">
@@ -2025,9 +1993,12 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
 <script src="https://yookassa.ru/integration/simplepay/js/yookassa_construct_form.js?v=1.34.0"></script>
 <script>
     const questions = [
-      { src: "assets/kids-question-27.jpg", alt: "Вопрос 27: Представь, что у тебя свой магазин - что бы в нём продавалось?" },
-      { src: "assets/kids-question-44.jpg", alt: "Вопрос 44: Какое твоё любимое место в нашем доме?" },
-      { src: "assets/kids-question-74.jpg", alt: "Вопрос 74: Представь, что у тебя есть волшебная дверь. Куда она ведёт?" }
+      { num: "№ 27", text: "Если бы у твоих чувств была погода, какая погода у тебя сейчас?" },
+      { num: "№ 44", text: "Какое твоё любимое место в нашем доме?" },
+      { num: "№ 57", text: "Если бы ты мог поменяться с кем-то жизнями на один день, кто бы это был?" },
+      { num: "№ 74", text: "Представь, что у тебя есть волшебная дверь. Куда она ведёт?" },
+      { num: "№ 89", text: "Если бы ты мог создать новый вид транспорта, как бы он выглядел?" },
+      { num: "№ 16", text: "Какие три профессии ты хотел бы попробовать в жизни?" }
     ];
 
     const menuButton = document.querySelector("[data-menu-button]");
@@ -2050,14 +2021,15 @@ mark.hl{background:var(--lime);color:inherit;padding:.04em .14em;border-radius:.
     });
 
     const questionButton = document.querySelector("[data-next-question]");
-    const questionImage = document.querySelector("[data-card-image]");
+    const questionNum = document.querySelector("[data-card-num]");
+    const questionText = document.querySelector("[data-card-question]");
     let questionIndex = 0;
 
     function showNextQuestion() {
-      if (!questionImage || !questions.length) return;
+      if (!questionNum || !questionText || !questions.length) return;
       questionIndex = (questionIndex + 1) % questions.length;
-      questionImage.src = questions[questionIndex].src;
-      questionImage.alt = questions[questionIndex].alt;
+      questionNum.textContent = questions[questionIndex].num;
+      questionText.textContent = questions[questionIndex].text;
       try { ym(110391405, "reachGoal", "question_preview_next", { card: questionIndex + 1 }); } catch (e) {}
     }
 
@@ -2208,10 +2180,7 @@ function wtCopy(){
     var pinterestSource = (new URLSearchParams(location.search).get('utm_source') || '').toLowerCase();
     var isPinterest = pinterestSource.indexOf('pinterest') !== -1 || /(^|\.)pinterest\./i.test(document.referrer);
     if (isPinterest) {
-      document.querySelectorAll('[data-pin-bridge], [data-pinterest-hero]').forEach(function (el) { el.removeAttribute('hidden'); });
-      document.querySelectorAll('[data-regular-hero]').forEach(function (el) { el.setAttribute('hidden', ''); });
-      var pdfQuick = document.querySelector('.pdf-quick');
-      if (preview && pdfQuick) pdfQuick.insertAdjacentElement('afterend', preview);
+      document.querySelectorAll('[data-pin-bridge]').forEach(function (el) { el.removeAttribute('hidden'); });
       goal('pinterest_landing');
     }
   } catch (e) {}
